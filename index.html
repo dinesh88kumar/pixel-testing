@@ -5,16 +5,12 @@
 </head>
 <body>
 
-
 <h1>Attribution Pixel Test</h1>
-
 
 <button onclick="purchase()">Simulate Purchase</button>
 
-
-<!-- Load pixel from GitHub Pages -->
+<!-- Attribution Pixel -->
 <script src="https://dinesh88kumar.github.io/pixel-testing/pixel.js"></script>
-
 
 <script>
 function purchase() {
@@ -22,7 +18,6 @@ function purchase() {
     alert("Pixel not loaded");
     return;
   }
-
 
   window.AttributionPixel.trackPurchase({
     order_id: "ORD_" + Math.floor(Math.random() * 100000),
@@ -32,11 +27,5 @@ function purchase() {
 }
 </script>
 
-
 </body>
 </html>
-
-
-
-
-
