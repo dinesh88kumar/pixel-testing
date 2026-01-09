@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attribution Pixel Test</title>
+</head>
+<body>
+
+
+<h1>Attribution Pixel Test</h1>
+
+
+<button onclick="purchase()">Simulate Purchase</button>
+
+
+<!-- Load pixel from GitHub Pages -->
+<script src="https://dinesh88kumar.github.io/pixel-testing/pixel.js"></script>
+
+
+<script>
+function purchase() {
+  if (!window.AttributionPixel) {
+    alert("Pixel not loaded");
+    return;
+  }
+
+
+  window.AttributionPixel.trackPurchase({
+    order_id: "ORD_" + Math.floor(Math.random() * 100000),
+    revenue: 49.99,
+    currency: "USD"
+  });
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
